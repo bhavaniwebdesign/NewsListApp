@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Newssingle from './Newssingle';
 import Loading from '../loading/Loading.js';
-import data from '../../data.json';
 import PropTypes from 'prop-types';
 import SearchNews from './SearchNews.js'
 import $ from 'jquery';
