@@ -75,7 +75,7 @@ render(){
    const { news, currentPage, perPageItems} = this.state;
    const indexOfLastItem = currentPage * perPageItems;
    const indexOfFirstItem = indexOfLastItem - perPageItems;
-   const currentTodos = this.state.news.slice(indexOfFirstItem , indexOfLastItem );
+   const currentPageFilter = this.state.news.slice(indexOfFirstItem , indexOfLastItem );
   return(
   <div>
         <SearchNews text={this.state.search}  onChange={(e) =>this.handleSearch(e)}/>
@@ -91,7 +91,7 @@ render(){
 
         <div className="container card-columns">
            {
-          this.state.loading ?  <Loading/> : (this.state.eventType === "click")  ? this.handleNews(currentTodos) :  this.handleNews(newsOne)
+          this.state.loading ?  <Loading/> : (this.state.eventType === "click")  ? this.handleNews(currentPageFilter) :  this.handleNews(newsOne)
           }
        </div>
   </div>
